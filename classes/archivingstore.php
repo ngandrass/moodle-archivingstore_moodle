@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Driver for storing archive data inside via the Moodle File API.
+ * Driver for storing archive data inside via the Moodle File API
  *
  * @package     archivingstore_moodle
  * @copyright   2025 Niels Gandraß <niels@gandrass.de>
@@ -31,7 +31,7 @@ defined('MOODLE_INTERNAL') || die(); // @codeCoverageIgnore
 
 
 /**
- * Driver for storing archive data inside via the Moodle File API.
+ * Driver for storing archive data inside via the Moodle File API
  */
 class archivingstore extends archivingstore_base {
 
