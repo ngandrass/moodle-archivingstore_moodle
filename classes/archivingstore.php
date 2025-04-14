@@ -24,9 +24,10 @@
 
 namespace archivingstore_moodle;
 
-// @codingStandardsIgnoreFile
+use local_archiving\driver\store\file_handle;
 use local_archiving\exception\storage_exception;
 
+// @codingStandardsIgnoreFile
 defined('MOODLE_INTERNAL') || die(); // @codeCoverageIgnore
 
 
@@ -67,7 +68,7 @@ class archivingstore extends \local_archiving\driver\store\archivingstore {
     /**
      * @inheritDoc
      */
-    public function store(\stored_file $file, string $path): void {
+    public function store(\stored_file $file, string $path): file_handle {
         // TODO: Implement store() method.
         throw new storage_exception('notimplemented', 'archivingstore_localdir');
     }
@@ -75,7 +76,7 @@ class archivingstore extends \local_archiving\driver\store\archivingstore {
     /**
      * @inheritDoc
      */
-    public function retrieve(string $path): \stored_file {
+    public function retrieve(file_handle $handle): \stored_file {
         // TODO: Implement retrieve() method.
         throw new storage_exception('notimplemented', 'archivingstore_localdir');
     }
@@ -83,7 +84,7 @@ class archivingstore extends \local_archiving\driver\store\archivingstore {
     /**
      * @inheritDoc
      */
-    public function delete(string $path, bool $strict = false): void {
+    public function delete(file_handle $handle, bool $strict = false): void {
         // TODO: Implement delete() method.
         throw new storage_exception('notimplemented', 'archivingstore_localdir');
     }
