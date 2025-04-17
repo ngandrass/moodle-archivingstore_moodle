@@ -68,7 +68,7 @@ class archivingstore extends \local_archiving\driver\store\archivingstore {
     /**
      * @inheritDoc
      */
-    public function store(\stored_file $file, string $path): file_handle {
+    public function store(int $jobid, \stored_file $file, string $path): file_handle {
         // TODO: Implement store() method.
         throw new storage_exception('notimplemented', 'archivingstore_localdir');
     }
