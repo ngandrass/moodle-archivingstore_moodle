@@ -36,54 +36,40 @@ defined('MOODLE_INTERNAL') || die(); // @codeCoverageIgnore
  */
 class archivingstore extends \local_archiving\driver\store\archivingstore {
 
-    /**
-     * @inheritDoc archivingstore_base::get_name()
-     */
+    #[\Override]
     public static function get_name(): string {
         return get_string('pluginname', 'archivingstore_moodle');
     }
 
-    /**
-     * @inheritDoc
-     */
+    #[\Override]
     public static function get_plugname(): string {
         return 'moodle';
     }
 
-    /**
-     * @inheritDoc
-     */
+    #[\Override]
     public function is_available(): bool {
         return true;
     }
 
-    /**
-     * @inheritDoc
-     */
+    #[\Override]
     public function get_free_bytes(): int {
         // TODO: Implement get_free_bytes() method.
         return 42;
     }
 
-    /**
-     * @inheritDoc
-     */
+    #[\Override]
     public function store(int $jobid, \stored_file $file, string $path): file_handle {
         // TODO: Implement store() method.
         throw new storage_exception('notimplemented', 'archivingstore_localdir');
     }
 
-    /**
-     * @inheritDoc
-     */
+    #[\Override]
     public function retrieve(file_handle $handle): \stored_file {
         // TODO: Implement retrieve() method.
         throw new storage_exception('notimplemented', 'archivingstore_localdir');
     }
 
-    /**
-     * @inheritDoc
-     */
+    #[\Override]
     public function delete(file_handle $handle, bool $strict = false): void {
         // TODO: Implement delete() method.
         throw new storage_exception('notimplemented', 'archivingstore_localdir');
