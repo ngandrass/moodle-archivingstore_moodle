@@ -69,7 +69,7 @@ class archivingstore extends \local_archiving\driver\archivingstore {
     }
 
     #[\Override]
-    public function retrieve(file_handle $handle): \stored_file {
+    public function retrieve(file_handle $handle, \stdClass $fileinfo): \stored_file {
         // TODO: Implement retrieve() method.
         throw new storage_exception('notimplemented', 'archivingstore_localdir');
     }
