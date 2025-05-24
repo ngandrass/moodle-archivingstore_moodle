@@ -26,6 +26,7 @@ namespace archivingstore_moodle;
 
 use local_archiving\exception\storage_exception;
 use local_archiving\file_handle;
+use local_archiving\type\storage_tier;
 
 // @codingStandardsIgnoreFile
 defined('MOODLE_INTERNAL') || die(); // @codeCoverageIgnore
@@ -35,6 +36,11 @@ defined('MOODLE_INTERNAL') || die(); // @codeCoverageIgnore
  * Driver for storing archive data inside via the Moodle File API
  */
 class archivingstore extends \local_archiving\driver\archivingstore {
+
+    #[\Override]
+    public static function get_storage_tier(): storage_tier {
+        return storage_tier::LOCAL;
+    }
 
     #[\Override]
     public static function supports_retrieve(): bool {

@@ -28,11 +28,16 @@ defined('MOODLE_INTERNAL') || die(); // @codeCoverageIgnore
 global $DB;
 
 if ($hassiteconfig) {
-    $settings = new admin_settingpage('archivingstore_moodle_settings', new lang_string('pluginname', 'archivingstore_moodle'));
+    $settings = new admin_settingpage('archivingstore_moodle', new lang_string('pluginname', 'archivingstore_moodle'));
 
     // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedIf
     if ($ADMIN->fulltree) {
-
+        // Enabled.
+        $settings->add(new admin_setting_configcheckbox('archivingstore_moodle/enabled',
+            get_string('setting_enabled', 'archivingstore_moodle'),
+            get_string('setting_enabled_desc', 'archivingstore_moodle'),
+            '1'
+        ));
     }
 
     // Settingpage is added to tree automatically. No need to add it manually here.
