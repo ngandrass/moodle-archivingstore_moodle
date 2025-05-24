@@ -37,16 +37,6 @@ defined('MOODLE_INTERNAL') || die(); // @codeCoverageIgnore
 class archivingstore extends \local_archiving\driver\archivingstore {
 
     #[\Override]
-    public static function get_name(): string {
-        return get_string('pluginname', 'archivingstore_moodle');
-    }
-
-    #[\Override]
-    public static function get_plugname(): string {
-        return 'moodle';
-    }
-
-    #[\Override]
     public static function supports_retrieve(): bool {
         return true;
     }
