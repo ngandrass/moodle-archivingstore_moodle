@@ -53,9 +53,9 @@ class archivingstore extends \local_archiving\driver\archivingstore {
     }
 
     #[\Override]
-    public function get_free_bytes(): int {
+    public function get_free_bytes(): ?int {
         // TODO: Implement get_free_bytes() method.
-        return 42;
+        return null;
     }
 
     #[\Override]
