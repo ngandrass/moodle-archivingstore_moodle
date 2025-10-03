@@ -1,6 +1,6 @@
 # Changelog
 
-## Version X.Y.Z (YYYYMMDDXX)
+## Version 1.0.0 (2025100300)
 
 - Implement store, retrieve, and delete functionality using the Moodle Filestore backend
 - Check free space in the moodledata directory to determine storage availability
