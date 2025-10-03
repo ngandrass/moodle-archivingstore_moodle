@@ -2,8 +2,9 @@
 
 ## Version X.Y.Z (YYYYMMDDXX)
 
-- Implement store, retrieve, and delete functionality using the Moodle Filestore backend.
-- Check free space in the moodledata directory to determine storage availability.
+- Implement store, retrieve, and delete functionality using the Moodle Filestore backend
+- Check free space in the moodledata directory to determine storage availability
+- Create unit tests
 - Add Moodle plugin CI for all supported Moodle versions
 
 
