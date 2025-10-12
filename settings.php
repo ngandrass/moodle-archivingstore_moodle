@@ -33,7 +33,8 @@ if ($hassiteconfig) {
     // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedIf
     if ($ADMIN->fulltree) {
         // Enabled.
-        $settings->add(new admin_setting_configcheckbox('archivingstore_moodle/enabled',
+        $settings->add(new admin_setting_configcheckbox(
+            'archivingstore_moodle/enabled',
             get_string('setting_enabled', 'archivingstore_moodle'),
             get_string('setting_enabled_desc', 'archivingstore_moodle'),
             '1'

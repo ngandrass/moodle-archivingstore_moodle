@@ -30,7 +30,7 @@ use local_archiving\file_handle;
 use local_archiving\storage;
 use local_archiving\type\storage_tier;
 
-// @codingStandardsIgnoreFile
+// phpcs:ignore
 defined('MOODLE_INTERNAL') || die(); // @codeCoverageIgnore
 
 
@@ -38,7 +38,6 @@ defined('MOODLE_INTERNAL') || die(); // @codeCoverageIgnore
  * Driver for storing archive data inside via the Moodle File API
  */
 class archivingstore extends \local_archiving\driver\archivingstore {
-
     /** @var string Name of the component passed to the Moodle file API */
     public const FS_COMPONENT = 'archivingstore_moodle';
 
@@ -144,5 +143,4 @@ class archivingstore extends \local_archiving\driver\archivingstore {
         // Delete file.
         $moodlestorefile->delete();
     }
-
 }

@@ -31,7 +31,6 @@ use local_archiving\storage;
  * Tests for the archivingstore_moodle implementation.
  */
 final class archivingstore_test extends \advanced_testcase {
-
     /**
      * Helper to get the test data generator for local_archiving
      *
@@ -214,5 +213,4 @@ final class archivingstore_test extends \advanced_testcase {
         $this->expectException(\local_archiving\exception\storage_exception::class);
         $store->delete($handle, strict: true);
     }
-
 }
